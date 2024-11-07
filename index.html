@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Marmitex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍽️ Marmitex e Bebidas 🍹</h1>
+        <img src="marmitex_image.jpg" alt="Marmitex" class="featured-image">
+    </header>
+    
+    <div class="product">
+        <h2>Marmitex</h2>
+        <label for="tamanho-marmitex">Tamanho:</label>
+        <select id="tamanho-marmitex">
+            <option value="pequeno" data-price="15">Pequeno - R$15</option>
+            <option value="medio" data-price="20">Médio - R$20</option>
+            <option value="grande" data-price="25">Grande - R$25</option>
+        </select>
+
+        <label for="quantidade-marmitex">Quantidade:</label>
+        <input type="number" id="quantidade-marmitex" value="1" min="1">
+
+        <label for="guarnicoes-marmitex">Guarnições:</label>
+        <select id="guarnicoes-marmitex" multiple>
+            <option value="Arroz branco">Arroz branco</option>
+            <option value="Tropeirinho">Tropeirinho</option>
+            <option value="Feijão em calda">Feijão em calda</option>
+            <option value="Banana frita">Banana frita</option>
+            <option value="Salpicão">Salpicão</option>
+            <option value="Maionese">Maionese</option>
+            <option value="Couve">Couve</option>
+            <option value="Repolho">Repolho</option>
+            <option value="Macarrão">Macarrão</option>
+        </select>
+
+        <label for="carne-marmitex">Carne:</label>
+        <select id="carne-marmitex">
+            <option value="Galinha frita">Galinha frita</option>
+            <option value="Boi ensopado">Boi ensopado</option>
+            <option value="Galinha com quiabo">Galinha com quiabo</option>
+            <option value="Molho de salsicha com milho">Molho de salsicha com milho</option>
+            <option value="Filé de frango à parmegiana">Filé de frango à parmegiana</option>
+            <option value="Filé de frango empanado">Filé de frango empanado</option>
+            <option value="Churrasco de boi">Churrasco de boi</option>
+            <option value="Porco e linguiça">Porco e linguiça</option>
+            <option value="Porco na pressão">Porco na pressão</option>
+        </select>
+
+        <button class="add-to-cart" data-name="Marmitex">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="beverage">
+        <h2>Bebidas</h2>
+        <label for="bebidas">Escolha uma bebida:</label>
+        <select id="bebidas">
+            <option value="Suco Natural" data-price="5">Suco Natural - R$5</option>
+            <option value="Refrigerante Lata" data-price="4">Refrigerante Lata - R$4</option>
+            <option value="Refrigerante 2L" data-price="10">Refrigerante 2L - R$10</option>
+        </select>
+
+        <button class="add-to-cart" data-name="Bebida">Adicionar ao Carrinho</button>
+    </div>
+
+    <div id="cart">
+        <h2>Seu Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <div id="total-price">R$ 0,00</div>
+        <button id="checkout-button">Finalizar Compra</button>
+    </div>
+
+    <div id="payment-info" style="display:none;">
+        <h2>Formulário de Entrega</h2>
+        <form id="delivery-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Rua:</label>
+            <input type="text" id="address" required>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" required>
+
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" required>
+
+            <label for="reference">Referência:</label>
+            <input type="text" id="reference" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="payment">Forma de Pagamento:</label>
+            <select id="payment">
+                <option value="pix">PIX</option>
+                <option value="cartao">Cartão</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+
+            <div id="troco-info" style="display:none;">
+                <label for="troco">Precisa de troco?</label>
+                <select id="troco">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+                <label for="valor-troco">Para quantos?</label>
+                <input type="text" id="valor-troco">
+            </div>
+
+            <button type="button" id="send-whatsapp">Enviar Pedido</button>
+        </form>
+    </div>
+
+    <div id="qr-code" style="display:none;">
+        <h2>Pagamento com PIX</h2>
+        <img src="qr_code_image.png" alt="QR Code">
+        <p>Chave PIX: sua_chave_pix_aqui</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

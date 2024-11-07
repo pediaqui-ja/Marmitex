@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.featured-image {
+    width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #5a5a5a;
+}
+
+.product, .beverage {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#cart {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#total-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#payment-info {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#qr-code {
+    margin-top: 20px;
+    width: 150px; /* Ajuste o tamanho do QR Code conforme necessário */
+}
